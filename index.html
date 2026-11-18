@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09091c">
+<title>For My Princess Ruqia 👑</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+background:linear-gradient(145deg,#080918,#17102d,#090b20);
+color:#fff0dc;font-family:Georgia,serif;overflow-x:hidden;
+}
+:root{--gold:#e8cb88;--purple:#a99be9}
+.stars{
+position:fixed;inset:0;pointer-events:none;z-index:0;
+background-image:
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+radial-gradient(1px 1px at 90px 100px,#e8cb88,transparent),
+radial-gradient(2px 2px at 180px 70px,#fff,transparent);
+background-size:230px 190px;
+animation:shine 5s infinite alternate;
+}
+@keyframes shine{to{opacity:.25}}
+section{
+position:relative;z-index:1;
+padding:75px 18px;max-width:850px;
+margin:auto;text-align:center;
+}
+h1{font-size:clamp(43px,9vw,75px);color:var(--gold);
+text-shadow:0 0 25px #a98bca}
+h2{font-size:29px;color:var(--gold);margin-bottom:20px}
+p{line-height:1.9;color:#e4d9ec}
+.card{
+background:rgba(255,255,255,.055);
+border:1px solid #b99a6655;border-radius:22px;
+padding:23px;margin:18px auto;
+backdrop-filter:blur(12px);
+box-shadow:0 15px 40px #0005;
+}
+.btn{
+border:0;border-radius:30px;padding:13px 24px;
+background:linear-gradient(120deg,#f2dba5,#a78bd0);
+color:#171126;font-family:Georgia;cursor:pointer;margin:10px;
+}
+.gold{color:var(--gold)}
+.hero{
+min-height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+}
+.crown{font-size:65px;animation:float 3s infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+.divider{width:90px;height:1px;background:var(--gold);margin:25px auto}
+.grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:14px;
+}
+.memory img{
+width:100%;height:250px;object-fit:cover;border-radius:14px;
+}
+.memory h3{color:var(--gold);margin:12px}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.counter div{
+background:#a99be91c;border:1px solid #a99be955;
+border-radius:14px;padding:13px 3px;
+}
+.counter strong{display:block;color:var(--gold);font-size:24px}
+.counter span{font-size:11px}
+.letter{text-align:left;white-space:pre-line;line-height:2}
+input{
+padding:12px;border-radius:12px;border:1px solid #b99a66;
+background:#100f25;color:white;width:100%;margin:8px 0;
+}
+.song{
+display:flex;justify-content:space-between;
+align-items:center;gap:10px;
+}
+.song button{
+background:transparent;border:1px solid var(--gold);
+color:var(--gold);border-radius:20px;padding:9px 15px;
+}
+canvas{width:100%;height:220px;background:#100e25;border-radius:15px}
+.moon-photo{
+width:min(100%,370px);margin:0 auto 30px;
+padding:9px;border:1px solid var(--gold);
+border-radius:22px;
+box-shadow:0 0 35px #a99be955,0 0 80px #a99be922;
+}
+.moon-photo img{
+display:block;width:100%;height:370px;
+object-fit:cover;border-radius:15px;
+}
+footer{text-align:center;padding:35px;color:#c8b8d5}
+@media(max-width:450px){
+.counter{grid-template-columns:repeat(2,1fr)}
+.moon-photo img{height:300px}
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<!-- WELCOME -->
+<section class="hero">
+<div class="crown">👑</div>
+<p>A LITTLE WORLD MADE FOR</p>
+<h1>Ruqia ✨</h1>
+<div class="divider"></div>
+<p>My Princess, My Favourite Person. 💗</p>
+<p>Welcome to your magical little world.</p>
+<button class="btn" onclick="go('memories')">Enter Your World ↓</button>
+</section>
+
+<!-- MEMORIES -->
+<section id="memories">
+<h2>Our Little Memories ✨</h2>
+<p>Every picture holds a beautiful feeling.</p>
+<div class="divider"></div>
+<div class="grid">
+
+<div class="card memory">
+<img src="photo1.jpg" alt="Memory 1">
+<h3>Beautiful Soul 💗</h3>
+<p>Your smile makes moments special.</p>
+</div>
+
+<div class="card memory">
+<img src="photo2.jpg" alt="Memory 2">
+<h3>My Favourite 🌷</h3>
+<p>A memory worth keeping forever.</p>
+</div>
+
+<div class="card memory">
+<img src="photo3.jpg" alt="Memory 3">
+<h3>Our World 🌙</h3>
+<p>Little moments, beautiful feelings.</p>
+</div>
+
+<div class="card memory">
+<img src="photo4.jpg" alt="Memory 4">
+<h3>Unforgettable 💫</h3>
+<p>Always close to my heart.</p>
+</div>
+
+<div class="card memory">
+<img src="photo5.jpg" alt="Memory 5">
+<h3>My Princess 👑</h3>
+<p>One of the sweetest parts of my world.</p>
+</div>
+
+</div>
+</section>
+
+<!-- LETTER -->
+<section>
+<h2>A Letter For You 💌</h2>
+<div class="card letter">
+Meri Jaan, Meri Shehzadii! 💗👑
+
+Aapko pata hai, aap meri life ka kitna pyara hissa hain?
+
+Aapki choti choti baatein, aapka hansna, aapka naraz hona aur phir mujhe tang karna, ye sab mere liye bohat special hai.
+
+Alhamdulillah ke aap meri life mein aayi.
+
+Main chahta hoon aap hamesha khush rahen, aapke saare khwab poore hon aur aapki smile kabhi kam na ho.
+
+Aap meri favourite princess hain. 🥹💗
+
+Hamesha aapka pagal sa bacha ❤️
+</div>
+</section>
+
+<!-- COUNTER -->
+<section>
+<h2>Our Time Together ⏳</h2>
+<p>Since 6 October 2025 · 3:26 PM</p>
+<div class="card counter">
+<div><strong id="d">0</strong><span>Days</span></div>
+<div><strong id="h">0</strong><span>Hours</span></div>
+<div><strong id="m">0</strong><span>Minutes</span></div>
+<div><strong id="s">0</strong><span>Seconds</span></div>
+</div>
+</section>
+
+<!-- GRAPH -->
+<section>
+<h2>Our Chat Statistics 📊</h2>
+<p>Our little world of conversations.</p>
+<div class="card">
+<p class="gold">Conversation Graph</p>
+<canvas id="graph" width="700" height="220"></canvas>
+<p>Demo graph — actual chat data can be added later.</p>
+</div>
+</section>
+
+<!-- CALCULATOR -->
+<section>
+<h2>Love Calculator 💗</h2>
+<div class="card">
+<p>Two names, one little surprise!</p>
+<input id="name1" placeholder="First name">
+<input id="name2" placeholder="Second name">
+<button class="btn" onclick="calculate()">Calculate 💕</button>
+<h1 id="result" style="font-size:42px;margin:20px">💗</h1>
+<p id="message">A little surprise awaits!</p>
+</div>
+</section>
+
+<!-- MUSIC -->
+<section>
+<h2>Our Music Corner 🎶</h2>
+<p>Four songs, four beautiful feelings.</p>
+
+<div class="card song">
+<span>Sitaare ✨</span>
+<button onclick="play(0)">▶ Play</button>
+</div>
+
+<div class="card song">
+<span>Kahani Suno 💌</span>
+<button onclick="play(1)">▶ Play</button>
+</div>
+
+<div class="card song">
+<span>Banjaara 🌙</span>
+<button onclick="play(2)">▶ Play</button>
+</div>
+
+<div class="card song">
+<span>Alfaaz ❤️</span>
+<button onclick="play(3)">▶ Play</button>
+</div>
+
+<div class="card">
+<p id="playing">Choose a song 🎧</p>
+<button class="btn" onclick="toggle()">Play / Pause</button>
+</div>
+</section>
+
+<!-- REASONS -->
+<section>
+<h2>Little Reasons 🌷</h2>
+<div class="card">
+<p>✨ Your beautiful heart.</p>
+<p>💗 Your adorable smile.</p>
+<p>🌙 Your lovely way of talking.</p>
+<p>👑 The way you make ordinary days special.</p>
+<p>🦋 Simply because you're you.</p>
+</div>
+</section>
+
+<!-- MOON ENDING -->
+<section id="moon">
+
+<div class="moon-photo">
+<img src="moon.jpg" alt="Moon on Our First Day">
+</div>
+
+<h2>Moon on Our First Day 🌙</h2>
+<div class="divider"></div>
+
+<p>6 October 2025 · 3:26 PM</p>
+
+<div class="card">
+<p>
+Some moments become memories,
+and some memories become a part of our hearts.
+</p>
+
+<p class="gold" style="margin-top:20px">
+This moon will always remind me of our beginning. 💗
+</p>
+</div>
+
+<h2 style="margin-top:35px">My Princess, My Star 👑</h2>
+<p>Happy Princess Day, Ruqia! ❤️</p>
+
+</section>
+
+<footer>
+Made with love, especially for Ruqia ✨
+</footer>
+
+<script>
+function go(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+/* LIVE COUNTER */
+const start=new Date("2025-10-06T15:26:00+05:00").getTime();
+
+function update(){
+let t=Math.max(0,Date.now()-start);
+document.getElementById("d").textContent=Math.floor(t/86400000);
+document.getElementById("h").textContent=Math.floor(t/3600000)%24;
+document.getElementById("m").textContent=Math.floor(t/60000)%60;
+document.getElementById("s").textContent=Math.floor(t/1000)%60;
+}
+update();
+setInterval(update,1000);
+
+/* LOVE CALCULATOR */
+function calculate(){
+let a=document.getElementById("name1").value.trim().toLowerCase();
+let b=document.getElementById("name2").value.trim().toLowerCase();
+
+if(!a||!b){
+document.getElementById("message").textContent="Enter both names first!";
+return;
+}
+
+let names=[a,b].sort();
+let seed=0;
+for(let c of (names[0]+"&"+names[1])){
+seed=(seed*31+c.charCodeAt(0))%100000;
+}
+let score=70+(seed%31);
+
+document.getElementById("result").textContent=score+"% 💗";
+document.getElementById("message").textContent=
+"Just for fun! Real feelings cannot be measured.";
+}
+
+/* GRAPH */
+const canvas=document.getElementById("graph");
+const ctx=canvas.getContext("2d");
+const values=[65,95,80,130,105,165,145,190,170,205];
+
+ctx.strokeStyle="#e8cb88";
+ctx.lineWidth=3;
+ctx.beginPath();
+
+values.forEach((v,i)=>{
+let x=25+i*70;
+let y=210-v;
+if(i===0)ctx.moveTo(x,y);
+else ctx.lineTo(x,y);
+});
+ctx.stroke();
+
+values.forEach((v,i)=>{
+ctx.beginPath();
+ctx.arc(25+i*70,210-v,4,0,Math.PI*2);
+ctx.fillStyle="#b99aeb";
+ctx.fill();
+});
+
+/* MUSIC PLAYER */
+const songs=[
+"Sitaare Ikkis 128 Kbps.mp3",
+"Kahani Suno 2.0.mp3",
+"Banjaara Ek Villain 320 Kbps.mp3",
+"Alfaaz Hamza Malik x Zain Zohaib Official Visualiser.mp3"
+];
+
+let audio=new Audio();
+let current=-1;
+
+function play(i){
+audio.pause();
+current=i;
+audio.src=songs[i];
+
+audio.play().then(()=>{
+document.getElementById("playing").textContent="Now Playing 🎵";
+}).catch(()=>{
+document.getElementById("playing").textContent="Please check song filename.";
+});
+}
+
+function toggle(){
+if(current===-1){play(0);return;}
+if(audio.paused)audio.play();
+else audio.pause();
+}
+</script>
+
+</body>
+</html>
